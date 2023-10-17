@@ -10,11 +10,10 @@ Please find more details on the [official GR@PPA website](https://atlas.kek.jp/o
 ```sh
 git clone https://github.com/beatrice-pan/GR-PPA-4.10.git
 cd GR-PPA-4.10
-tar -zxvf GR@PPA-4.10
+tar -zxvf GR@PPA-4.10.tgz
 cp matrix_susy2_v1.00.tgz GR@PPA-4.10
 cd GR@PPA-4.10
 tar -zxvf matrix_susy2_v1.00.tgz
-cd GR@PPA-4.10/
 ./Config.perl
 make susy2
 make kinem
