@@ -30,3 +30,13 @@ To change the random seed (generating different data based on the same input par
 make
 ./alsample
 ```
+
+## SUSY Mass Configurations
+The configurations of the mass of SUSY particles could be found in ```grcpar.F```. For setting the parameters, there are a few constarints. 
+
+- The gluino mass calculation is determined by the following formula: $$m_\text{gluino}= ALPHAS\times(1.0-(\frac{AMW}{AMZ})^2)/ALPHA \times XM2$$
+where ALPHAS, AMW, AMZ, ALPHA are given in ```grcpar.F```. To modify the gluino mass $m_\text{gluino}$, only the XM2 should be changed accordingly and the rest of parameters in the formula remain the same. 
+
+- The SUSY particle suffixed with "2" should have a larger mass than that is suffixed with "1". E.g., AMSQ1 should be set smaller than SMSQ2; AMSBT1 should be smaller than AMSBT2. 
+
+Kind reminder: every time the parameters change, one should ```make``` again before running the generator. 
